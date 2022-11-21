@@ -27,5 +27,9 @@
       Finally you can type (npm run dev) and access the application interface on 
       http://localhost:3000
 		</li>
+		<li>
+			**Contributing to the app**</br>
+			To work with a task, create a branch with the page name. When it is finished, make a pull request to the master branch.
+		</li>
 	</ol>
 </p>
