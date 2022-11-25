@@ -1,0 +1,25 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Salary",
+      "type": "income",
+      "price": 5000,
+      "createdAt": "Fri Nov 04 2022 22:54:06 GMT-0400"
+    },
+    {
+      "id": 2,
+      "description": "Shoes",
+      "type": "outcome",
+      "price": 50,
+      "createdAt": "Fri Nov 04 2022 18:54:06 GMT-0400"
+    },
+    {
+      "id": 3,
+      "description": "UQAC",
+      "type": "outcome",
+      "price": 1000,
+      "createdAt": "2022-11-09T13:12:32.212Z"
+    }
+  ]
+}
