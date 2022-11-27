@@ -3,20 +3,12 @@ import {
   Box,
   Card,
   Divider,
-  HStack,
   Icon,
   Link,
-  Stack,
   Text,
   Tooltip,
 } from "@chakra-ui/react";
-import {
-  RiArrowRightCircleLine,
-  RiContactsLine,
-  RiDashboardLine,
-  RiGitMergeLine,
-  RiInputMethodLine,
-} from "react-icons/ri";
+import { RiArrowRightCircleLine } from "react-icons/ri";
 import { AiOutlineUserAdd, AiFillQuestionCircle } from "react-icons/ai";
 import { Signin } from "./Signin";
 import { useState } from "react";
@@ -98,13 +90,12 @@ export function Sidebar() {
       )}
       <Box marginTop="8" marginLeft="6" textAlign="center" width="84%">
         <Text fontSize="16">{`Besoin d'aide?`}</Text>
-
         <Card background="gray.50" height="28">
           <Link>
             <Text marginLeft="2" marginTop="6" fontSize="16">
               Documentation
             </Text>
-            <Icon as={AiFillQuestionCircle} fontSize="28" />
+            <Icon as={AiFillQuestionCircle} fontSize="28" color="blue.900" />
           </Link>
         </Card>
       </Box>

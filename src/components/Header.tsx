@@ -1,21 +1,5 @@
-import {
-  Flex,
-  Input,
-  Text,
-  Icon,
-  HStack,
-  Box,
-  Avatar,
-  Spacer,
-  VStack,
-  Divider,
-  Link,
-} from "@chakra-ui/react";
-import {
-  RiUserReceived2Fill,
-  RiArrowRightSLine,
-  RiUserAddLine,
-} from "react-icons/ri";
+import { Flex, Text, Icon, HStack, Spacer, Link } from "@chakra-ui/react";
+import { RiUserReceived2Fill, RiArrowRightSLine } from "react-icons/ri";
 import { AiTwotoneBell, AiTwotoneSetting } from "react-icons/ai";
 
 interface HeaderProps {
@@ -25,16 +9,7 @@ interface HeaderProps {
 
 export function Header({ previousPage, currentPage }: HeaderProps) {
   return (
-    <Flex
-      as="header"
-      // width="80vw"
-      // maxWidth="310"
-      // height="20"
-      // marginX="auto"
-      // marginTop="4"
-      // paddingX="6"
-      // textAlign="right"
-    >
+    <Flex as="header">
       <HStack p="4" spacing="2">
         <Link>{previousPage}</Link>
         <Icon as={RiArrowRightSLine} fontSize="20" />
