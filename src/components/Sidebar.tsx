@@ -8,6 +8,7 @@ import {
   Text,
   Tooltip,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 import { RiArrowRightCircleLine } from "react-icons/ri";
 import { AiOutlineUserAdd, AiFillQuestionCircle } from "react-icons/ai";
 import { Signin } from "./Signin";
@@ -35,7 +36,7 @@ export function Sidebar() {
         <Box>
           <Signin />
           <Box marginTop="8" marginLeft="6">
-            <Link display="flex">
+            <Link display="flex" as={NextLink} href="/connect/signup">
               <Icon as={AiOutlineUserAdd} fontSize="28" />
               <Text marginLeft="2" fontWeight="bold" fontSize="20">
                 Sign Up
