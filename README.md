@@ -24,8 +24,8 @@
 			**Running the app**</br>
 			After cloning it. You type (cd front-prix-banque) to access your local directory.
       Then you type (npm install or yar add) to install all the required dependencies.
-      Finally you can type (npm run dev) and access the application interface on 
-      http://localhost:3000
+      After install, you need to type in your terminal (npm run dev:server) to start the
+      frontend server.json service. Finally you can type (npm run dev) and access the application interface on http://localhost:3000
 		</li>
 		<li>
 			**Contributing to the app**</br>
