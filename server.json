@@ -1,25 +1,39 @@
 {
-  "transactions": [
+  "clients": [
     {
       "id": 1,
-      "description": "Salary",
-      "type": "income",
-      "price": 5000,
-      "createdAt": "Fri Nov 04 2022 22:54:06 GMT-0400"
+      "name": "John Connor",
+      "address": "2201 Burns Bay Road",
+      "phone": "593 488 5577",
+      "email": "user1@email.com",
+      "password": "123",
+      "account": "00201",
+      "emailCode": 1414,
+      "createdAt": "Fri Nov 04 2022 22:54:06 GMT-0400",
+      "updatedAt": "Fri Nov 09 2022 22:54:06 GMT-0400"
     },
     {
       "id": 2,
-      "description": "Shoes",
-      "type": "outcome",
-      "price": 50,
-      "createdAt": "Fri Nov 04 2022 18:54:06 GMT-0400"
+      "name": "Rambo III",
+      "address": "256 Decendent St",
+      "phone": "493 577 3587",
+      "email": "user2@email.com",
+      "password": "123",
+      "account": "00202",
+      "emailCode": 1515,
+      "createdAt": "Fri Nov 12 2022 22:54:06 GMT-0400",
+      "updatedAt": "Fri Nov 17 2022 22:54:06 GMT-0400"
     },
     {
-      "id": 3,
-      "description": "UQAC",
-      "type": "outcome",
-      "price": 1000,
-      "createdAt": "2022-11-09T13:12:32.212Z"
+      "name": "Chapolin",
+      "address": "Rua das batatas",
+      "phone": "343434343",
+      "email": "user3@email.com",
+      "password": "123",
+      "account": "00203",
+      "emailCode": 1616,
+      "createdAt": "2022-12-01T06:43:49.765Z",
+      "id": 3
     }
   ]
 }

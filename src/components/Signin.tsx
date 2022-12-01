@@ -10,16 +10,44 @@ import {
 } from "@chakra-ui/react";
 import { RiLoginCircleLine } from "react-icons/ri";
 import { useForm } from "react-hook-form";
+import { api } from "../libs/axios";
+import { toastify } from "../libs/toastify";
+import { useRouter } from "next/router";
 
 interface handleSubmitProps {
   compte: string;
   password: string;
 }
+
 export function Signin() {
   const { register, handleSubmit } = useForm<handleSubmitProps>();
+  const router = useRouter();
 
-  function onSubmit(data: handleSubmitProps) {
-    console.log(data);
+  async function onSubmit({ compte, password }: handleSubmitProps) {
+    const response = await api.get(
+      `clients?account=${compte}&password=${password}`
+    );
+    if (response.data.length === 1) {
+      const user = {
+        account: String(response.data[0].account),
+        address: String(response.data[0].address),
+        email: String(response.data[0].email),
+        id: String(response.data[0].id),
+        name: String(response.data[0].name),
+        password: String(response.data[0].password),
+        phone: String(response.data[0].phone),
+      };
+
+      router.push({
+        pathname: `/dashboard`,
+        query: { data: JSON.stringify(user) },
+      });
+    } else {
+      toastify({
+        type: "error",
+        message: "E-mail ou mot de passe introuvable",
+      });
+    }
   }
 
   return (

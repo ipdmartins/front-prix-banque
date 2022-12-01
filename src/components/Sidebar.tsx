@@ -12,10 +12,19 @@ import NextLink from "next/link";
 import { RiArrowRightCircleLine } from "react-icons/ri";
 import { AiOutlineUserAdd, AiFillQuestionCircle } from "react-icons/ai";
 import { Signin } from "./Signin";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export function Sidebar() {
-  const [logged, setLogged] = useState(false);
+interface propsData {
+  login: boolean;
+}
+
+export function Sidebar({ login }: propsData) {
+  const [logged, setLogged] = useState(login);
+
+  useEffect(() => {
+    setLogged(login);
+  }, [login]);
+
   return (
     <Box
       as="aside"
@@ -36,12 +45,19 @@ export function Sidebar() {
         <Box>
           <Signin />
           <Box marginTop="8" marginLeft="6">
-            <Link display="flex" as={NextLink} href="/connect/signup">
-              <Icon as={AiOutlineUserAdd} fontSize="28" />
-              <Text marginLeft="2" fontWeight="bold" fontSize="20">
-                Sign Up
-              </Text>
-            </Link>
+            <NextLink
+              href={{
+                pathname: "/connect/signup",
+                query: { previousPage: "Home", currentPage: "Signup" },
+              }}
+            >
+              <Box display="flex">
+                <Icon as={AiOutlineUserAdd} fontSize="28" />
+                <Text marginLeft="2" fontWeight="bold" fontSize="20">
+                  Sign Up
+                </Text>
+              </Box>
+            </NextLink>
           </Box>
         </Box>
       )}
@@ -89,9 +105,9 @@ export function Sidebar() {
           </Box>
         </Box>
       )}
-      <Box marginTop="8" marginLeft="6" textAlign="center" width="84%">
+      <Box marginTop="8" marginLeft="6" textAlign="center" width="78%">
         <Text fontSize="16">{`Besoin d'aide?`}</Text>
-        <Card background="gray.50" height="28">
+        <Card background="gray.50" height="24">
           <Link>
             <Text marginLeft="2" marginTop="6" fontSize="16">
               Documentation
