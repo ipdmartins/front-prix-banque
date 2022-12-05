@@ -7,7 +7,7 @@
   </a>
 </p>
 <p align="left">
-  This project is part of an assignment demanded by the subject of Enterprise Application Architecture (UQAC). This repo intends to make the version control for the front end of our application. We build it with NextJS and Typescript.
+  This project is part of an assignment demanded by the subject of Enterprise Application Architecture (UQAC). This repo intends to make the version control for the front end of our application. We built it with NextJS, Typescript, and the Chakra-UI library.
 </p>
 <p>
 	You can get this project on your local dev environment with these steps:

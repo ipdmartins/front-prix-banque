@@ -3,6 +3,7 @@ import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import GlobalUser from "../components/GlobalUser";
 
 interface userProps {
   account: String;
@@ -22,8 +23,13 @@ export default function Dashboard() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const userData = JSON.parse(String(data));
-
+    let userData;
+    if (data) {
+      userData = JSON.parse(String(data));
+      GlobalUser.environmentUser.push(userData);
+    } else {
+      userData = GlobalUser.environmentUser[0];
+    }
     setUser(userData);
   }, []);
 

@@ -70,7 +70,7 @@ export function Sidebar({ login }: propsData) {
               </Link>
             </Tooltip>
             <Text marginLeft="2" fontSize="18">
-              Bienvenue Igor!
+              Igor Martins
             </Text>
           </Box>
           <Box marginTop="8" textAlign="center">
@@ -78,30 +78,30 @@ export function Sidebar({ login }: propsData) {
               Menu de navigation
             </Text>
             <Divider orientation="horizontal" />
-            <Box marginTop="6" marginLeft="6">
-              <Link display="flex">
+            <NextLink href="/invoice-transfer-history">
+              <Box display="flex" marginTop="6" marginLeft="6">
                 <Icon as={RiArrowRightCircleLine} fontSize="28" />
                 <Text marginLeft="2" fontSize="18">
                   Relevé
                 </Text>
-              </Link>
-            </Box>
-            <Box marginTop="4" marginLeft="6">
-              <Link display="flex">
+              </Box>
+            </NextLink>
+            <NextLink href="/transfer">
+              <Box display="flex" marginTop="6" marginLeft="6">
                 <Icon as={RiArrowRightCircleLine} fontSize="28" />
                 <Text marginLeft="2" fontSize="18">
                   Virement
                 </Text>
-              </Link>
-            </Box>
-            <Box marginTop="4" marginLeft="6">
-              <Link display="flex">
+              </Box>
+            </NextLink>
+            <NextLink href="/invoice">
+              <Box display="flex" marginTop="6" marginLeft="6">
                 <Icon as={RiArrowRightCircleLine} fontSize="28" />
                 <Text marginLeft="2" fontSize="18">
                   Facture
                 </Text>
-              </Link>
-            </Box>
+              </Box>
+            </NextLink>
           </Box>
         </Box>
       )}

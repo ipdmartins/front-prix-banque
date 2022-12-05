@@ -27,7 +27,8 @@ export function Signin() {
     const response = await api.get(
       `clients?account=${compte}&password=${password}`
     );
-    if (response.data.length === 1) {
+
+    if (response.data !== null && response.data.length === 1) {
       const user = {
         account: String(response.data[0].account),
         address: String(response.data[0].address),
