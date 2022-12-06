@@ -32,7 +32,6 @@ export function Sidebar({ login }: propsData) {
       maxWidth="64"
       height="100vh"
       marginRight="2"
-      marginBottom="2"
       backgroundColor="blue.500"
     >
       <Box marginTop="8">
@@ -78,7 +77,7 @@ export function Sidebar({ login }: propsData) {
               Menu de navigation
             </Text>
             <Divider orientation="horizontal" />
-            <NextLink href="/invoice-transfer-history">
+            <NextLink href="/history">
               <Box display="flex" marginTop="6" marginLeft="6">
                 <Icon as={RiArrowRightCircleLine} fontSize="28" />
                 <Text marginLeft="2" fontSize="18">

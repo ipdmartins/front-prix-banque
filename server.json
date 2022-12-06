@@ -34,6 +34,28 @@
       "emailCode": 1616,
       "createdAt": "2022-12-01T06:43:49.765Z",
       "id": 3
+    },
+    {
+      "name": "Le tavernier",
+      "address": "ABCdeddddj",
+      "phone": "9343874934",
+      "email": "user4@email.com",
+      "password": "123",
+      "account": "00204",
+      "emailCode": 1616,
+      "createdAt": "2022-12-05T19:35:00.386Z",
+      "id": 4
+    },
+    {
+      "name": "Arnold Schwatzneger",
+      "address": "Rue Mozart",
+      "phone": "34343432134",
+      "email": "user5@email.com",
+      "password": "123",
+      "account": "00809",
+      "emailCode": 8261,
+      "createdAt": "2022-12-06T00:30:07.301Z",
+      "id": 5
     }
   ]
 }

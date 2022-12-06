@@ -51,9 +51,9 @@ const series = [{ name: "series1", data: [31, 70, 120, 90, 65, 97, 102, 110] }];
 
 export default function Home() {
   return (
-    <Flex direction="row" height="100vh" marginBottom="2">
+    <Flex direction="row" height="100%" marginBottom="1">
       <Sidebar login={false} />
-      <Flex width="100%" maxWidth={1480} direction="column">
+      <Flex width="100%" maxWidth={1480} direction="column" marginBottom="4">
         <Box textAlign="center">
           <Text fontWeight="bold" fontSize="24" marginTop="6" color="gray.900">
             Bienvenue dans votre application de gestion financière

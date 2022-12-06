@@ -25,6 +25,7 @@ import NextLink from "next/link";
 import { api } from "../../libs/axios";
 import { useState } from "react";
 import { toastify } from "../../libs/toastify";
+import { randomInt } from "crypto";
 
 interface handleSubmitProps {
   name: string;
@@ -61,14 +62,15 @@ export default function SignUp() {
     email,
     password,
   }: handleSubmitProps) {
+    const account = Math.floor(Math.random() * 1000);
     const resp = await api.post("clients", {
       name,
       address,
       phone,
       email,
       password,
-      account: "00203",
-      emailCode: 1616,
+      account: `00${account}`,
+      emailCode: Math.floor(Math.random() * 10000),
       createdAt: new Date(),
     });
 
@@ -80,12 +82,12 @@ export default function SignUp() {
     const response = await api.get(`clients?email=${user.email}`);
 
     if (emailCode == response.data[0].emailCode) {
-      router.push("/");
       toastify({
         type: "success",
         message: "Enregistrement créé. Vous pouvez vous connecter",
       });
       onClose();
+      router.push("/");
     } else {
       toastify({
         type: "error",
