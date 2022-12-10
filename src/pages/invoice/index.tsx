@@ -59,7 +59,7 @@ export default function InvoiceList() {
                 float="right"
                 type="submit"
                 color="white"
-                bg="cyan.500"
+                bg="blue.700"
                 value="ENVOYER"
               />
             </form>
@@ -75,7 +75,7 @@ export default function InvoiceList() {
                 float="left"
                 type="submit"
                 color="white"
-                bg="cyan.500"
+                bg="blue.700"
               >
                 GERER FACTURE
               </Button>

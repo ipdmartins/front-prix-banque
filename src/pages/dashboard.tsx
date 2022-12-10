@@ -63,12 +63,14 @@ export default function Dashboard() {
       <Sidebar login={true} />
       <Flex width="100%" maxWidth={1480} direction="column">
         <Header previousPage="Home" currentPage="Dashboard" />
-        <Box textAlign="center">
-          <Text fontWeight="bold" fontSize="24" marginTop="6" color="gray.900">
-            Bienvenue dans votre Dashboard de gestion financière
-          </Text>
-        </Box>
-        <Center marginTop="8">
+        <Center>
+          <Box>
+            <Text fontWeight="bold" fontSize="24" marginTop="0" color="gray.900">
+              Bienvenue dans votre Dashboard de gestion financière
+            </Text>
+          </Box>
+        </Center>
+        <Center marginTop="4">
           <HStack spacing="24" width="50%">
             <Box>
               <Text marginLeft="2" fontSize="18" fontWeight="bold">
