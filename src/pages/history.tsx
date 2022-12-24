@@ -1,24 +1,18 @@
 import {
   Box,
-  Card,
   Divider,
   Center,
   Flex,
-  HStack,
-  Icon,
   Text,
   Table,
-  Thead,
-  Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
-  TableCaption,
-  TableContainer,
+  Icon,
 } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
+import { AiOutlineCloudDownload } from "react-icons/ai";
 
 const Virement = [
   {
@@ -83,33 +77,47 @@ export default function TransferHistory() {
       <Flex width="100%" maxWidth={1480} direction="column">
         <Header previousPage="Dashboard" currentPage="Create a transfer" />
         <Divider orientation="horizontal" />
-        <Box>
-          <Text fontWeight="bold" fontSize="24" marginTop="6" color="gray.900">
-            Les Virement et les Paiements
+        <Box marginLeft={8}>
+          <Text fontWeight="bold" fontSize="24" marginTop="6" color="gray.100">
+            Transfers and Payments
           </Text>
         </Box>
 
-        <Box bg="white" marginTop="6">
-          <Text fontWeight="bold" fontSize="18" marginTop="1" color="gray.900">
-            Les reçus
+        <Box bg="white" margin={4}>
+          <Text
+            fontWeight="bold"
+            fontSize="18"
+            marginTop={4}
+            marginLeft={4}
+            color="gray.900"
+          >
+            Receipts
           </Text>
           <Center>
-            <Table>
+            <Table color="gray.900">
               <Tr>
                 <Th>
-                  <Text marginRight="6">ID</Text>
+                  <Text marginRight="6" color="gray.900">
+                    ID
+                  </Text>
                 </Th>
                 <Th>
-                  <Text marginRight="6">Montant</Text>
+                  <Text marginRight="6" color="gray.900">
+                    Amount
+                  </Text>
                 </Th>
                 <Th>
-                  <Text marginRight="6">Type de Transaction </Text>{" "}
+                  <Text marginRight="6" color="gray.900">
+                    Transaction type{" "}
+                  </Text>{" "}
                 </Th>
                 <Th>
-                  <Text marginRight="6">Date d exécution</Text>{" "}
+                  <Text marginRight="6" color="gray.900">
+                    Date
+                  </Text>{" "}
                 </Th>
                 <Th>
-                  <Text marginRight="6">Download</Text>{" "}
+                  <Text color="gray.900">Download</Text>{" "}
                 </Th>
               </Tr>
 
@@ -125,7 +133,11 @@ export default function TransferHistory() {
                   <Td>{virement.TypeOfTransaction}</Td>
                   <Td>{virement.ExecutionDate}</Td>
                   <a href="http://localhost:3000/invoice/">
-                    <Td color="blue">Téléchargement</Td>
+                    <Center>
+                      <Td color="blue">
+                        <Icon as={AiOutlineCloudDownload} fontSize="20" />
+                      </Td>
+                    </Center>
                   </a>
                 </Tr>
               ))}

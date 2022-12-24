@@ -1,11 +1,9 @@
 import {
   Box,
-  Card,
   Divider,
   Center,
   Flex,
   HStack,
-  Icon,
   Text,
   Input,
   Button,

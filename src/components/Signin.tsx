@@ -62,7 +62,7 @@ export function Signin() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormControl textAlign="center" marginTop="2" isRequired>
           <FormLabel fontSize="16" marginLeft="6" marginBottom="0">
-            Numéro de Compte
+            Account number
           </FormLabel>
           <Input
             background="gray.100"
@@ -74,7 +74,7 @@ export function Signin() {
             {...register("compte")}
           />
           <FormLabel fontSize="16" marginLeft="6" marginBottom="0">
-            Mot de passe
+            Password
           </FormLabel>
           <Input
             type="password"

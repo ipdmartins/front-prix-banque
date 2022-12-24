@@ -32,31 +32,33 @@ export function Sidebar({ login }: propsData) {
       maxWidth="64"
       height="100vh"
       marginRight="2"
-      backgroundColor="blue.500"
+      backgroundColor="gray.100"
+      color="gray.900"
     >
-      <Box marginTop="8">
+      <Box backgroundColor="gray.600" paddingTop={8}>
         <Text textAlign="center" fontWeight="bold" fontSize="larger">
           PRIX BANQUE
         </Text>
-        <Divider orientation="horizontal" />
       </Box>
       {!logged && (
         <Box>
           <Signin />
           <Box marginTop="8" marginLeft="6">
-            <NextLink
-              href={{
-                pathname: "/connect/signup",
-                query: { previousPage: "Home", currentPage: "Signup" },
-              }}
-            >
-              <Box display="flex">
-                <Icon as={AiOutlineUserAdd} fontSize="28" />
-                <Text marginLeft="2" fontWeight="bold" fontSize="20">
-                  Sign Up
-                </Text>
-              </Box>
-            </NextLink>
+            <Tooltip label="Open your account" placement="top-start">
+              <NextLink
+                href={{
+                  pathname: "/connect/signup",
+                  query: { previousPage: "Home", currentPage: "Signup" },
+                }}
+              >
+                <Box display="flex">
+                  <Icon as={AiOutlineUserAdd} fontSize="28" />
+                  <Text marginLeft="2" fontWeight="bold" fontSize="20">
+                    Sign Up
+                  </Text>
+                </Box>
+              </NextLink>
+            </Tooltip>
           </Box>
         </Box>
       )}
@@ -105,7 +107,7 @@ export function Sidebar({ login }: propsData) {
         </Box>
       )}
       <Box marginTop="8" marginLeft="6" textAlign="center" width="78%">
-        <Text fontSize="16">{`Besoin d'aide?`}</Text>
+        <Text fontSize="16">{`Need help?`}</Text>
         <Card background="gray.50" height="24">
           <Link>
             <Text marginLeft="2" marginTop="6" fontSize="16">

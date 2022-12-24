@@ -11,19 +11,19 @@ const Chart = dynamic(() => import("react-apexcharts"), {
 });
 const options = {
   chart: {
-    background: "#353646",
+    background: "#a4a9b0",
     zoom: {
       enable: false,
     },
-    foreColor: "#f9f9fbfe",
+    foreColor: "#323238",
   },
   xaxis: {
     type: "datetime",
     axisBorder: {
-      color: "#f9f9fbfe",
+      color: "#323238",
     },
     axisTicks: {
-      color: "#f9f9fbfe",
+      color: "#323238",
     },
     categories: [
       "2021-03-18T00:00:00.000Z",
@@ -55,8 +55,8 @@ export default function Home() {
       <Sidebar login={false} />
       <Flex width="100%" maxWidth={1480} direction="column" marginBottom="4">
         <Box textAlign="center">
-          <Text fontWeight="bold" fontSize="24" marginTop="6" color="gray.900">
-            Bienvenue dans votre application de gestion financière
+          <Text fontWeight="bold" fontSize="24" marginTop="6" color="gray.1 00">
+            Welcome to your financial management appl
           </Text>
         </Box>
         <Center marginTop="8">

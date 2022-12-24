@@ -20,9 +20,9 @@ export default function TransferCreation() {
       <Flex width="100%" maxWidth={1480} direction="column">
         <Header previousPage="Dashboard" currentPage="Create a transfer" />
         <Divider orientation="horizontal" />
-        <Box>
-          <Text marginLeft="2" fontWeight="bold" fontSize="2xl">
-            Virement
+        <Box marginLeft={8}>
+          <Text fontWeight="bold" fontSize="24" marginTop="6" color="gray.100">
+            Payment
           </Text>
         </Box>
         <Center textAlign="center">
@@ -73,7 +73,7 @@ export default function TransferCreation() {
             />
             <Box textAlign="right">
               <Button marginTop="4" background="green" color="white">
-                Confirmer
+                Confirm
               </Button>
             </Box>
             <Box textAlign="left">
@@ -83,7 +83,7 @@ export default function TransferCreation() {
                 color="white"
                 size="sm"
               >
-                Gestion des bénéficiaires
+                Beneficiary management
               </Button>
             </Box>
           </Box>

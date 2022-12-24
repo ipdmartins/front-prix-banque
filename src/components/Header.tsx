@@ -1,7 +1,6 @@
 import { Flex, Text, Icon, HStack, Spacer } from "@chakra-ui/react";
 import { RiUserReceived2Fill, RiArrowRightSLine } from "react-icons/ri";
 import { AiTwotoneBell, AiTwotoneSetting } from "react-icons/ai";
-import { useState } from "react";
 import NextLink from "next/link";
 
 interface HeaderProps {
@@ -11,7 +10,7 @@ interface HeaderProps {
 
 export function Header({ previousPage, currentPage }: HeaderProps) {
   return (
-    <Flex as="header" height="16" marginTop="4">
+    <Flex as="header" height="12" marginTop="4">
       {previousPage !== "Home" && (
         <HStack p="4" spacing="2">
           <NextLink href={`/${previousPage.toLowerCase()}`}>

@@ -32,7 +32,7 @@ export default function Beneficiary() {
         <Divider orientation="horizontal" />
         <Box>
           <Text marginLeft="4" fontWeight="bold" fontSize="2xl">
-            Les bénéficiaires
+            Beneficiaries
           </Text>
         </Box>
       </Flex>
