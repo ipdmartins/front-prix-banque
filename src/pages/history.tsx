@@ -83,7 +83,7 @@ export default function TransferHistory() {
           </Text>
         </Box>
 
-        <Box bg="white" margin={4}>
+        <Box background="gray.100" margin={6} borderRadius={8}>
           <Text
             fontWeight="bold"
             fontSize="18"
