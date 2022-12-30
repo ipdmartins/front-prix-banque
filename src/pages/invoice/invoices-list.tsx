@@ -83,35 +83,39 @@ export default function InvoiceList() {
       <Flex width="100%" maxWidth={1480} direction="column">
         <Header previousPage="Invoice Creation" currentPage="Invoice list" />
         <Divider orientation="horizontal" />
-        <Box>
-          <Text fontWeight="bold" fontSize="24" margin="6" color="gray.900">
-            Gestion des Factures
+        <Box marginLeft={8}>
+          <Text fontWeight="bold" fontSize="24" marginTop="6" color="gray.100">
+            Invoice management
           </Text>
         </Box>
-
-        <Card bg="white" marginTop="1">
-          <CardHeader>
-            <Heading size="md">Les reçus</Heading>
-          </CardHeader>
+        <Box background="gray.100" margin={6} borderRadius={8}>
+          <Text
+            fontWeight="bold"
+            fontSize="18"
+            marginTop={4}
+            marginLeft={4}
+            color="gray.900"
+          >
+            Receipts
+          </Text>
           {Factures.map((factures) => (
-            <CardBody key={factures.Id}>
-              <Box border="1px solid" borderRadius="5" padding="2">
-                <Text
-                  fontWeight="bold"
-                  fontSize="18"
-                  marginTop="1"
-                  color="gray.900"
-                >
-                  {" "}
-                  {factures.Nom}{" "}
-                </Text>
-                <Text> Email : {factures.Email} </Text>
-                <Text> Montant : {factures.Montant} $ </Text>
-                <Text> {`Date d'échance : ${factures.DateEchance}`} </Text>
-              </Box>
-            </CardBody>
+            <Box
+              border="1px solid"
+              key={factures.Id}
+              margin={4}
+              padding={3}
+              borderRadius={10}
+              background="gray.700"
+            >
+              <Text fontWeight="bold" fontSize="18" color="gray.100">
+                {factures.Nom}
+              </Text>
+              <Text>E-mail: {factures.Email} </Text>
+              <Text>Amount: CAD {factures.Montant}</Text>
+              <Text> {`Due date: ${factures.DateEchance}`} </Text>
+            </Box>
           ))}
-        </Card>
+        </Box>
       </Flex>
     </Flex>
   );

@@ -53,7 +53,7 @@ export default function InvoiceList() {
     <Flex direction="row" height="100vh" marginBottom="2">
       <Sidebar login={true} />
       <Flex width="100%" maxWidth={1480} direction="column">
-        <Header previousPage="Invoice Creation" currentPage="Invoice list" />
+        <Header previousPage="Dashboard" currentPage="Invoice list" />
         <Divider orientation="horizontal" />
         <Box marginLeft={8}>
           <Text fontWeight="bold" fontSize="24" marginTop="6" color="gray.100">

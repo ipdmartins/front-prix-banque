@@ -100,13 +100,13 @@ export default function SignUp() {
     <Box>
       <Box
         as="header"
-        backgroundColor="blue.500"
+        backgroundColor="gray.600"
         textAlign="center"
         paddingTop="6"
         paddingBottom="6"
       >
-        <Text fontWeight="bold" fontSize="larger">
-          PRIX BANQUE
+        <Text fontWeight="bold" fontSize="28" color="gray.900">
+          New Bank
         </Text>
       </Box>
       <HStack p="4" spacing="2">
@@ -116,12 +116,12 @@ export default function SignUp() {
       </HStack>
       <Center>
         <Text marginLeft="2" fontWeight="bold" fontSize="20" marginTop="8">
-          Merci de votre intérêt.
+          Thank you for your interest.
         </Text>
       </Center>
       <Center>
         <Text marginLeft="2" fontWeight="bold" fontSize="16" marginTop="2">
-          Veuillez remplir les détails ci-dessous pour créer votre compte.
+          Fill in the fields below to create your new account.
         </Text>
       </Center>
       <Center marginTop="6">
@@ -129,20 +129,20 @@ export default function SignUp() {
           borderColor="gray.900"
           border="1px"
           borderRadius={8}
-          backgroundColor="blue.500"
-          width="40%"
+          backgroundColor="gray.100"
+          width="50%"
           padding="4"
         >
           <form onSubmit={handleSubmit(onSubmit)}>
             <FormControl marginTop="2">
               <Flex>
-                <FormLabel marginTop="1" fontSize="18">
-                  Nom:
+                <FormLabel marginTop="1" fontSize="18" color="gray.900">
+                  Name:
                 </FormLabel>
                 <Spacer />
                 <Input
-                  background="gray.100"
-                  borderColor="gray.900"
+                  background="gray.700"
+                  borderColor="gray.100"
                   borderRadius="8"
                   size="sm"
                   width="70%"
@@ -150,13 +150,13 @@ export default function SignUp() {
                 />
               </Flex>
               <Flex>
-                <FormLabel marginTop="1" fontSize="18">
-                  Addresse:
+                <FormLabel marginTop="1" fontSize="18" color="gray.900">
+                  Address:
                 </FormLabel>
                 <Spacer />
                 <Input
-                  background="gray.100"
-                  borderColor="gray.900"
+                  background="gray.700"
+                  borderColor="gray.100"
                   borderRadius="8"
                   size="sm"
                   width="70%"
@@ -164,13 +164,13 @@ export default function SignUp() {
                 />
               </Flex>
               <Flex>
-                <FormLabel marginTop="1" fontSize="18">
-                  Téléphone:
+                <FormLabel marginTop="1" fontSize="18" color="gray.900">
+                  Phone:
                 </FormLabel>
                 <Spacer />
                 <Input
-                  background="gray.100"
-                  borderColor="gray.900"
+                  background="gray.700"
+                  borderColor="gray.100"
                   borderRadius="8"
                   size="sm"
                   width="70%"
@@ -178,14 +178,14 @@ export default function SignUp() {
                 />
               </Flex>
               <Flex>
-                <FormLabel marginTop="1" fontSize="18">
+                <FormLabel marginTop="1" fontSize="18" color="gray.900">
                   E-mail:
                 </FormLabel>
                 <Spacer />
                 <Input
                   type="email"
-                  background="gray.100"
-                  borderColor="gray.900"
+                  background="gray.700"
+                  borderColor="gray.100"
                   borderRadius="8"
                   size="sm"
                   width="70%"
@@ -193,14 +193,14 @@ export default function SignUp() {
                 />
               </Flex>
               <Flex>
-                <FormLabel marginTop="1" fontSize="18">
-                  {`Répétez l'email:`}
+                <FormLabel marginTop="1" fontSize="18" color="gray.900">
+                  {`Repeat your e-mail:`}
                 </FormLabel>
                 <Spacer />
                 <Input
                   type="email"
-                  background="gray.100"
-                  borderColor="gray.900"
+                  background="gray.700"
+                  borderColor="gray.100"
                   borderRadius="8"
                   size="sm"
                   width="70%"
@@ -208,14 +208,14 @@ export default function SignUp() {
                 />
               </Flex>
               <Flex>
-                <FormLabel marginTop="1" fontSize="18">
-                  Mot de passe:
+                <FormLabel marginTop="1" fontSize="18" color="gray.900">
+                  Password:
                 </FormLabel>
                 <Spacer />
                 <Input
                   type="password"
-                  background="gray.100"
-                  borderColor="gray.900"
+                  background="gray.700"
+                  borderColor="gray.100"
                   borderRadius="8"
                   size="sm"
                   width="70%"
@@ -226,12 +226,12 @@ export default function SignUp() {
                 <Button
                   marginTop="2"
                   size="sm"
-                  background="gray.100"
+                  background="green"
                   borderColor="gray.900"
                   variant="outline"
                   type="submit"
                 >
-                  Confirmer
+                  Create
                 </Button>
               </Box>
             </FormControl>
