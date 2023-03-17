@@ -1,5 +1,6 @@
 <h1 align="center">
-  Prix Banque interface
+  New Bank interface
+  see https://ant.design/docs/react/introduce
 </h1>
 <p align="center">
   <a href="https://github.com/ipdmartins/Hedera_test1/blob/master/LICENSE">

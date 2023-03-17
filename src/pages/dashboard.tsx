@@ -14,6 +14,7 @@ import {
   Text,
   Th,
   Thead,
+  Tooltip,
   Tr,
 } from "@chakra-ui/react";
 import { Header } from "../components/Header";
@@ -47,6 +48,10 @@ export default function Dashboard() {
   } = router;
   const [user, setUser] = useState(null);
 
+  async function getBalance() {
+    console.log("balance");
+  }
+
   useEffect(() => {
     let userData;
     if (data) {
@@ -74,7 +79,7 @@ export default function Dashboard() {
           <HStack spacing="24" width="50%">
             <Box>
               <Text marginLeft="2" fontSize="18" fontWeight="bold">
-                Solde de compte 1 :
+                Account balance 1:
               </Text>
               <Card
                 variant="outline"
@@ -88,13 +93,23 @@ export default function Dashboard() {
                 <HStack>
                   <Text fontSize="20">CAD 155.00</Text>
                   <Spacer />
-                  <Icon as={FaEye} fontSize="24" color="grey.900" />
+                  <Tooltip
+                    label="Click to access your balance"
+                    placement="auto-end"
+                  >
+                    <Icon
+                      as={FaEye}
+                      fontSize="24"
+                      color="grey.900"
+                      onClick={getBalance}
+                    />
+                  </Tooltip>
                 </HStack>
               </Card>
             </Box>
             <Box>
               <Text marginLeft="2" fontSize="18" fontWeight="bold">
-                Solde de compte 2 :
+                Account balance 2:
               </Text>
               <Card
                 variant="outline"

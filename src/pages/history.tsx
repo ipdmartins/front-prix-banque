@@ -69,7 +69,6 @@ const columns = [
     accessor: "executionDate",
   },
 ];
-
 export default function TransferHistory() {
   return (
     <Flex direction="row" height="100vh" marginBottom="2">

@@ -13,19 +13,32 @@ import { useForm } from "react-hook-form";
 import { api } from "../libs/axios";
 import { toastify } from "../libs/toastify";
 import { useRouter } from "next/router";
+import { useAuth } from "../context/authProvider/useAuth";
 
 interface handleSubmitProps {
-  compte: string;
+  account: string;
   password: string;
 }
 
 export function Signin() {
   const { register, handleSubmit } = useForm<handleSubmitProps>();
   const router = useRouter();
+  const auth = useAuth();
 
-  async function onSubmit({ compte, password }: handleSubmitProps) {
+  async function onSubmit({ account, password }: handleSubmitProps) {
+    try {
+      await auth.authenticate(account, password);
+
+      router.push(`/dashboard`);
+    } catch (error) {
+      toastify({
+        type: "error",
+        message: "E-mail or password invalid",
+      });
+    }
+
     const response = await api.get(
-      `clients?account=${compte}&password=${password}`
+      `clients?account=${account}&password=${password}`
     );
 
     if (response.data !== null && response.data.length === 1) {
@@ -71,7 +84,7 @@ export function Signin() {
             width="80%"
             borderColor="gray.900"
             marginBottom="4"
-            {...register("compte")}
+            {...register("account")}
           />
           <FormLabel fontSize="16" marginLeft="6" marginBottom="0">
             Password

@@ -56,14 +56,14 @@ export default function Home() {
       <Flex width="100%" maxWidth={1480} direction="column" marginBottom="4">
         <Box textAlign="center">
           <Text fontWeight="bold" fontSize="24" marginTop="6" color="gray.1 00">
-            Welcome to your financial management appl
+            Welcome to your financial management app
           </Text>
         </Box>
         <Center marginTop="8">
           <HStack spacing="28">
             <Box>
               <Text marginLeft="2" fontSize="18" fontWeight="bold">
-                Échanger
+                Exchange
               </Text>
               <Card
                 variant="outline"
@@ -110,9 +110,9 @@ export default function Home() {
           fontWeight="bold"
           fontSize="18"
           marginTop="8"
-          color="gray.900"
+          color="gray.100"
         >
-          Sachez où investir pour assurer votre avenir
+          Discover where to invest to secure your future
         </Text>
         <Center marginTop="2">
           <Chart
@@ -126,8 +126,8 @@ export default function Home() {
         <Center marginTop="6">
           <HStack>
             <Box maxWidth={500}>
-              <Text fontSize="20" fontWeight="bold">
-                Demandez votre carte de crédit
+              <Text fontSize="18" fontWeight="bold">
+                Claim your credit card
               </Text>
               <Text fontSize="18">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
